@@ -11,9 +11,7 @@ You are creating a badge system. This badge system depends on the amount of poin
 Planning:
 This system contains 2 functions
 1. ShowStatus():Read through the list and show points of each mode: "new", "easy", "medium", "hardest", and "apocolypse"
-2. AddPoints(): Add points to the mode by 1 
-
-
+2. AddPoints(): Add points to the mode by +1 
 
 CHALLENGE 1
 1) Make a function MakeBadge. This function goes through all the badge and add the points together. If the points total is...
@@ -70,6 +68,27 @@ function AddPoints(){
   })
 }
 
+//CHALLENGE 1
+function MakeBadge(){
+    let total = 0 ;
+    for (mode in badge ){
+    //add numbers together to total
+    total = total + badge[mode];
+    let Status = "" ;
+    } if ( total < 10 ){
+    Status = "horrible newbie" ;
+    } else if ( total >= 10 && total < 20 ){
+    Status = "adventurer" ;
+    } else if ( total >= 20 && total < 30 ){
+    Status = "slayer" ;
+  } else if ( total >= 30 && total <= 40 ){
+    Status = "divined" ;
+    } else if ( total > 40 ){
+    Status = "eternal" ;
+    } console.log ( `Number of total task: ${ total } , Status: ${ Status } ` )
+    StartApp ();
+
+}
 
 
 function StartApp (){
@@ -80,6 +99,8 @@ function StartApp (){
     ShowStatus();
   } else if ( command === "add" ){
     AddPoints();
+  } else if ( command === "total" ){
+    MakeBadge();
   } else {
     console.log ( "Try again!" );
     StartApp ()
