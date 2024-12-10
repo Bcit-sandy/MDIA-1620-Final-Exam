@@ -10,7 +10,6 @@ Only add a color when the theme color is true otherwise console log that it's no
 When a color is toggled from true to false, also remove the color from userColors. You can do this by making a new array, then looping through userColors and only pushing the colors that are true into the new array. Then reassign the new array to userColors.
 */
 
-
 /*
 Planning:
 This application will contain 3 functions
@@ -85,19 +84,19 @@ function ToggleThemeColor(){
 }
 
 function StartApp (){
-  readline . question ("What is your command? " , command => {
-  if ( command === "quit" ){
-    readline . close ();
-  } else if ( command === "add" ){
+  readline.question ("What is your command? " , command => {
+  if (command === "quit"){
+    readline.close ();
+  } else if (command === "add"){
     AddUserColor ();
-  } else if ( command === "remove" ){
+  } else if (command === "remove"){
     RemoveColor ();
-  } else if ( command === "display" ){
+  } else if (command === "display"){
     DisplayUserColors ();
-  } else if ( command === "toggle" ){
+  } else if (command === "toggle"){
     ToggleThemeColor ();
   } else {
-    console . log ( "Try again!" );
+    console.log ( "Try again!");
     StartApp ();}
   })
 }

@@ -43,23 +43,23 @@ function ShowStatus(){
   }
 }
 
-//rename this to AddPoints
+//rename this to AddPoints //CHALLENGE 2
 function AddPoints(){
   readline.question("Which mode do you want to add a point?", mode =>{
     if (mode === "new"){
-      console.log(`Badge new has won a point! Current points: ${badge.new +1}`);
+      console.log(`Badge new has won a point! Current points: ${badge.new + 1*(mode.length)}`);
       badge[mode]++;
     } else if (mode === "easy"){
-      console.log(`Badge new has won a point! Current points: ${badge.easy +1}`);
+      console.log(`Badge easy has won a point! Current points: ${badge.easy + 1*(mode.length)}`);
       badge[mode]++;
     } else if (mode === "medium"){
-      console.log(`Badge new has won a point! Current points: ${badge.medium +1}`);
+      console.log(`Badge medium has won a point! Current points: ${badge.medium +1*(mode.length)}`);
       badge[mode]++;
     } else if (mode === "hardest"){
-      console.log(`Badge new has won a point! Current points: ${badge.hardest +1}`);
+      console.log(`Badge hardest has won a point! Current points: ${badge.hardest +1*(mode.length)}`);
       badge[mode]++;
     } else if (mode === "apocolypse"){
-      console.log(`Badge new has won a point! Current points: ${badge.apocolypse +1}`);
+      console.log(`Badge apocolypse has won a point! Current points: ${badge.apocolypse +1*(mode.length)}`);
       badge[mode]++;
     }else {
       console.log ("Unknown mode, please try again!")
